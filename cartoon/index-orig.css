@@ -1,0 +1,350 @@
+.canvas {
+    margin: 80px 0 0 0;
+    width: 500px;
+    height: 380px;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    perspective-origin: 100% 0%;
+    position: relative;
+    transition: .3s ease;
+}
+
+.box_front {
+    position: relative;
+    width: 500px;
+    height: 380px;
+    overflow: hidden;
+    animation: sky-color 100s linear infinite;
+}
+
+.box_right {
+    width: 100px;
+    height: 380px;
+    
+    position: absolute;
+    top: 0;
+    right: -100px;
+    transform-origin: 0 50%;
+    transform: rotateY(90deg);
+    z-index: -1;
+    animation: sky-color 100s linear infinite;
+}
+
+.box_top {
+    width: 500px;
+    height: 100px;
+    transform-origin: 50% 0 0;
+    transform: rotateX(-90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: sky-color-top 100s linear infinite;
+}
+
+@keyframes sky-color-top {
+    0% {
+        background: skyblue;
+    }
+    25% {
+        background: darkslateblue;
+    }
+    50% {
+        background: darkslateblue;
+    }
+    100% {
+        background: skyblue;
+    }
+}
+
+@keyframes sky-color {
+    0% {
+        background: skyblue;
+        box-shadow: 0 -400px 300px -300px steelblue inset;
+    }
+    25% {
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px orangered inset;
+    }
+    50% {
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px transparent inset;
+    }
+    100% {
+        background: skyblue;
+        box-shadow: 0 -400px 300px -300px steelblue inset;
+    }
+}
+
+.ship::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100px;
+    height: 20px;
+    background: #e25c45;
+    border-radius: 0 0 0 20px;
+}
+
+.ship::before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    content: '';
+    width: 65px;
+    height: 16px;
+    background: #fff;
+    border-radius: 20px 0 0 0;
+}
+
+.ship {
+    position: absolute;
+    bottom: 30px;
+    right: -100px;
+    width: 100px;
+    height: 36px;
+    animation: ship-move 60s linear infinite;
+}
+
+@keyframes ship-move {
+    to {
+        transform: translateX(-700px);
+    }
+}
+
+.ship_smokestack {
+    position: absolute;
+    width: 10px;
+    height: 17px;
+    background: #a18e6e;
+    bottom: 36px;
+    left: 45px;
+}
+
+.ship_window {
+    position: absolute;
+    background: #a18e6e;
+    width: 7px;
+    height: 7px;
+    left: 40px;
+    top: 6px;
+    border-radius: 50%;
+    box-shadow: 13px 0 0px 0px #a18e6e, -13px 0 0px 0px #a18e6e;
+}
+
+.smoke div {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+}
+
+.smoke-1 {
+    top: -25px;
+    right: 44px;
+    animation: smoke-move 2s ease-out infinite;
+}
+
+.smoke-2 {
+    top: -25px;
+    right: 42px;
+    animation: smoke-move 2s ease-out 1.2s infinite;
+}
+
+.smoke-3 {
+    top: -25px;
+    right: 49px;
+    animation: smoke-move 2s ease-out .7s infinite;
+}
+
+@keyframes smoke-move {
+    50% {
+        transform: translateY(-150%) scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-300%) scale(2);
+    }
+}
+
+.sun {
+    box-shadow: 0 0 100px #ffdf05;
+    background: #ffcf11;
+    width: 80px;
+    height: 80px;
+    top: 30px;
+    right: 50%;
+    border-radius: 50%;
+    position: absolute;
+    animation: sun-rotate 15s linear infinite;
+}
+
+.sun-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-origin: bottom center;
+    animation: sun-move 100s linear infinite;
+}
+
+@keyframes sun-move {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sun div {
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    top: -20px;
+    width: 2px;
+    height: 100px;
+    border: 10px solid #ffcf11;
+    border-width: 10px 0 10px 0;
+}
+
+.sun div:nth-child(2) {
+    transform: rotate(18deg);
+}
+
+.sun div:nth-child(3) {
+    transform: rotate(36deg);
+}
+
+.sun div:nth-child(4) {
+    transform: rotate(54deg);
+}
+
+.sun div:nth-child(5) {
+    transform: rotate(72deg);
+}
+
+.sun div:nth-child(6) {
+    transform: rotate(90deg);
+}
+
+.sun div:nth-child(7) {
+    transform: rotate(-18deg);
+}
+
+.sun div:nth-child(8) {
+    transform: rotate(-36deg);
+}
+
+.sun div:nth-child(9) {
+    transform: rotate(-54deg);
+}
+
+.sun div:nth-child(10) {
+    transform: rotate(-72deg);
+}
+
+.cloud {
+    width: 200px;
+    height: 60px;
+    background: #fff;
+    opacity: .8;
+    
+    border-radius: 200px;
+    
+    position: absolute;
+    left: -180px;
+}
+
+.cloud:before, .cloud:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    
+    border-radius: 100px;
+}
+
+.cloud:after {
+    width: 120px;
+    height: 120px;
+    top: -55px;
+    left: auto;
+    right: 15px;
+}
+
+.cloud-1 {
+    top: 10px;
+    /*transform: scale(.3);*/
+    /*animation: cloud-move-3 70s linear infinite;*/
+}
+
+/*@keyframes cloud-move-3 {*/
+    /*to {*/
+        /*transform: translateX(700px) scale(.3);*/
+    /*}*/
+/*}*/
+
+.cloud-2 {
+    top: 50px;
+    /*transform: scale(-.4, .4);*/
+    /*animation: cloud-move-2 40s linear 20s infinite;*/
+}
+
+/*@keyframes cloud-move-2 {*/
+    /*to {*/
+        /*transform: translateX(700px) scale(-.4, .4);*/
+    /*}*/
+/*}*/
+
+.cloud-3 {
+    top: 100px;
+    /*transform: scale(.5);*/
+    /*animation: cloud-move-1 30s linear 3s infinite;*/
+}
+
+/*@keyframes cloud-move-1 {*/
+    /*to {*/
+        /*transform: translateX(700px) scale(.5);*/
+    /*}*/
+/*}*/
+
+.cloud-4 {
+    top: 170px;
+    /*transform: scale(-.6, .6);*/
+    /*animation: cloud-move-4 20s linear 15s infinite;*/
+}
+
+/*@keyframes cloud-move-4 {*/
+    /*to {*/
+        /*transform: translateX(700px) scale(-.6, .6);*/
+    /*}*/
+/*}*/
+
+.sea {
+    background: #2a94d6;
+    position: absolute;
+    opacity: .8;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+
+.sea::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1d7fbb;
+    height: 10px;
+}
+
+@keyframes sun-rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}
