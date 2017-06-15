@@ -99,16 +99,19 @@ mark.z-index.blue:before {
 }
 
 mark.z-index.green-blue:before,
+mark.z-index.red-blue:before,
 mark.z-index.red-green:before {
     left: -42px;
 }
 
 mark.z-index.green-blue:after,
+mark.z-index.red-blue:after,
 mark.z-index.red-green:after {
     left: -52px;
 }
 
 mark.z-index.red-green:before,
+mark.z-index.red-blue:before,
 mark.z-index.red:before {
     background: #f00;
 }
@@ -119,6 +122,7 @@ mark.z-index.green:before {
     background: #0f0;
 }
 
+mark.z-index.red-blue:after,
 mark.z-index.green-blue:after,
 mark.z-index.blue:before {
     background: #00f;
@@ -549,6 +553,17 @@ div.body div.fragment.visible.animated {
     padding: 20px !important;
 }
 
+.show-abs-width.visible ~ .ex .box {
+    width: 200px;
+}
+
+.show-abs-height.visible ~ .ex .box {
+    height: 100px;
+}
+
+.show-abs-margin.visible ~ .ex .box {
+    margin: 20px;
+}
 .wrap-abs {
     text-align: left;
     transition: all .3s ease;
@@ -878,16 +893,6 @@ dd + dd {
     margin-right: 13px;
 }
 
-#width:checked ~ .ex .box {
-    width: 200px;
-}
-#height:checked ~ .ex .box {
-    height: 100px;
-}
-#margin:checked ~ .ex .box {
-    margin: 20px;
-}
-
 /*====three columt layout====*/
 .three-column .box {
     height: 100px;
@@ -911,6 +916,15 @@ dd + dd {
 }
 .three-column-size.visible ~ .ex.three-column{
     width: 50%;
+}
+/*==========*/
+.clearfix-step-1.visible ~ .ex .box.left{
+    float: left;
+}
+.clearfix-step-2.visible ~ .ex > .box::after{
+    content: '';
+    clear: both;
+    display: block;
 }
 /*==========*/
 .reveal code {

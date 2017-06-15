@@ -213,7 +213,7 @@
                </tr>
                </tbody>
            </table>
-            <a href="http://www.w3.org/TR/CSS2/visuren.html#relative-positioning">w3c</a>
+            <a href="http://www.w3.org/TR/CSS2/visuren.html#relative-positioning">https://clck.ru/AMrfP</a>
        </section>
         <section>
             <h2>Содержащий блок</h2>
@@ -221,8 +221,8 @@
             <p>– прямоугольник, относительно которого считаются позиция и размеры бокса элементов.</p>
             <ul>
                 <li>Для корневых элементов – это прямоугольник размерами с <mark class="fragment toggle">вьюпорт</mark></li>
-                <li>Для элементов position: relative | static – это границы контента <mark class="fragment toggle">ближайшего предка <a href="http://www.w3.org/TR/CSS2/visuren.html#block-boxes">блочного уровня</a></li>
-                <li><mark class="fragment toggle">Относительно спозиционированный</mark> блок создаёт новый <a href="http://www.w3.org/TR/CSS2/visudet.html">содержащий блок</a></mark></li>
+                <li>Для элементов position: relative | static – это границы контента <mark class="fragment toggle">ближайшего предка блочного уровня</li>
+                <li><mark class="fragment toggle">Относительно спозиционированный</mark> блок создаёт новый содержащий блок</mark></li>
             </ul>
         </section>
         <section>
@@ -244,7 +244,7 @@
                  <li class="fragment">inline, inline-block, table-... -> block</li>
                  <li class="fragment">У абсолютно спозиционированных элементов не схлапываются внешние отступы</li>
             </ul>
-            <a href="http://www.w3.org/TR/CSS2/visuren.html#absolute-positioning">w3c</a>
+            <a href="http://www.w3.org/TR/CSS2/visuren.html#absolute-positioning">https://clck.ru/AMsCJ</a>
         </section>
         <section>
 <pre class="html size-l"><code><div class="wrap">
@@ -317,16 +317,23 @@
         </section>
         <section data-transition="none">
             <p></p>
-<pre class="css size-l"><code>.box1 {
+<pre class="css size-l"><code data-noescape="">.box1 {
     position: absolute;
     top: 10px;
     right: 20px;
     bottom: 30px;
     left: 40px;
+
+<span class="fragment" data-fragment-index="1">    margin: 20px;</span>
+<span class="fragment" data-fragment-index="2">    width: 200px;</span>
+<span class="fragment" data-fragment-index="3">    height: 100px;</span>
 }</pre></code>
-            <input type="checkbox" class="checkbox" id="width" style="transform: scale(2)"><label for="width">width: 200px</label><br>
-            <input type="checkbox" class="checkbox " id="height" style="transform: scale(2)"><label for="height">height: 100px</label><br>
-            <input type="checkbox" class="checkbox " id="margin" style="transform: scale(2)"><label for="margin">margin: 20px</label>
+            <!--<input type="checkbox" class="checkbox" id="width" style="transform: scale(2)"><label for="width">width: 200px</label><br>-->
+            <!--<input type="checkbox" class="checkbox " id="height" style="transform: scale(2)"><label for="height">height: 100px</label><br>-->
+            <!--<input type="checkbox" class="checkbox " id="margin" style="transform: scale(2)"><label for="margin">margin: 20px</label>-->
+            <div class="fragment show-abs-margin"  data-fragment-index="1"></div>
+            <div class="fragment show-abs-width"  data-fragment-index="2"></div>
+            <div class="fragment show-abs-height"  data-fragment-index="3"></div>
             <div class="ex">
                 <div class="wrap wrap-abs visible"  style="position: relative; height: 150px">
                     wrapper
@@ -379,8 +386,8 @@
                 </tr>
                 </tbody>
             </table>
-                <a href="http://codepen.io/anon/pen/YyvBLJ">Интерактив</a>
-                <a href="https://drafts.csswg.org/css-position/#abs-non-replaced-width">w3c</a>
+                <a href="http://codepen.io/anon/pen/YyvBLJ">https://clck.ru/AMsKd(Пример)</a><br>
+                <a href="https://drafts.csswg.org/css-position/#abs-non-replaced-width">https://clck.ru/AMsKh(w3c)</a>
         </section>
         <section>
             <h2>Position</h2>
@@ -410,7 +417,8 @@
     top: 100px;
     left: 100px;
 }</pre></code>
-            <a href="http://codepen.io/anon/pen/MaqEeN?editors=110"> Пример</a>
+            <img src="img/fixed.gif" class="fragment" height="300">
+            <!--<a href="http://codepen.io/anon/pen/MaqEeN?editors=110"> Пример</a>-->
         </section>
         <section>
             <h2>Position</h2>
@@ -445,9 +453,12 @@
     position: sticky;
     top: 0;
 }</pre></code>
-            <a href="http://jsbin.com/qewesajudi/1">Пример</a>
+            <!--<a href="http://jsbin.com/qewesajudi/1">Пример</a>-->
         </section>
-        <section data-background-image="img/cat2.gif">
+        <section>
+            <img src="img/sticky.gif">
+        </section>
+        <section>
             <h2>Наложения элементов</h2>
         </section>
         <section>
@@ -522,11 +533,11 @@
     z-index: 1;
 }</pre></code>
             <img src="https://drafts.csswg.org/css-position-3/images/stack.png"><br>
-            <a href="http://habrahabr.ru/post/166435/">Про z-index</a>
+            <a href="http://habrahabr.ru/post/166435/">https://clck.ru/AMuuJ</a>
         </section>
         <section>
             <h2>Но не всё так просто...</h2>
-            <img height="550" src="https://v1.std3.ru/a7/c5/1429001055-a7c52aa7c9543f546ed59de493bcd63f.gif">
+            <!--<img height="550" src="https://v1.std3.ru/a7/c5/1429001055-a7c52aa7c9543f546ed59de493bcd63f.gif">-->
         </section>
         <section>
             <h2>Контекст наложения</h2>
@@ -582,7 +593,7 @@
                        <div>red box</div>
                   </div>
                   <div class="out a2 z2 mt has-inner">
-                    <div>
+                    <div style="transform: translateZ(60px)">
                         green <br>
                         box <br>
                         text! <br>
@@ -594,7 +605,19 @@
                 </div>
             </div>
         </section>
-
+        <section>
+           <div class="">
+               <ol>
+                   <li>Background и border элемента, который создаёт контекст наложения</li>
+                   <li>Позиционированный элемент (и его дети) с z-index < 0.</li>
+                   <li>Элементы блочного уровня в нормальном потоке</li>
+                   <li>Плавающие элементы</li>
+                   <li><mark style="color#000; background: #0f0">Элементы inline уровня</mark></li>
+                   <li>Позиционированный элемент (и их потомки) с z-index = 0 или auto. opacity < 1</li>
+                   <li>Позиционированный элемент (и их потомки) с z-index > 0</li>
+               </ol>
+           </div>
+       </section>
         <section data-transition="none">
 <pre class="html size-l"><code><div class="wrap">
     <div class="red">red</div>
@@ -889,7 +912,7 @@
                 </ol>
             </div>
         </section>
-         <section data-background-image="img/hell.png">
+         <section>
              <aside class="notes">
                  Паранжа. Селекты. Попапы. Много разработчиков. На доске нарисовать!!!!
              </aside>
@@ -908,26 +931,6 @@
             </ul>
         </section>
         <section>
-            <h2>ДЗ<span class="fragment" data-fragment-index="1"> 2015</span></h2>
-
-            <p class="fragment"data-fragment-index="2">Подсветка строк и колонок в таблице.</p>
-<pre class="css size-l fragment" data-fragment-index="2"><code>td { position: relative; }
-td::after {
-    position: absolute;
-    left: 0;
-    top: -5000px;
-
-    width: 100%;
-    height: 10000px;
-
-    z-index: -1;
-
-    content: '';
-}</pre></code>
-            <a class="fragment" data-fragment-index="2" href="https://rawgit.com/VasiliiKuznecov/verstka-tasks-3/1bcb4830010954173552f152b0b2903cdd711347/index.html">z-index: 1;</a><br>
-            <a class="fragment" data-fragment-index="2" href="https://rawgit.com/AlexanderVakhitov/verstka-tasks-3/c5c2e28b75f76580fbbc9163b64ffb297a58f728/index.html">z-index: -1;</a>
-        </section>
-        <section data-background-image="img/fish-wallpaper-wonderful.jpg">
             <h2>Плавающие элементы</h2>
         </section>
         <section>
@@ -944,9 +947,9 @@ td::after {
             <li class="fragment">inline элементы «знают» о float и обтекают элемент по сторонам</li>
             <li class="fragment" style="opacity: .3"  >Создают блочный контекст форматирования</li>
             <li class="fragment">Ширина float блока определяется по содержимому</li>
-            <li class="fragment">Вертикальные отступы margin элементов с float не сливаются с отступами соседей</li>
+            <li class="fragment">Отступы элементов с float не сливаются с отступами соседей</li>
             </ul>
-            <a href="http://habrahabr.ru/post/136622/">Float</a>
+            <a href="http://habrahabr.ru/post/136622/">https://clck.ru/AMsfQ</a>
         </section>
         <section>
 <pre class="html size-l"><code><div class="wrap">
@@ -1133,8 +1136,6 @@ td::after {
                 </div>
             </div>
         </section>
-        <section data-background-image="img/cat1.gif">
-        </section>
         <section>
             <h3>Блочный  контекст форматирования</h3>
 
@@ -1145,7 +1146,7 @@ td::after {
                  <li class="fragment">display: inline-block | table-cell | table-captions (не блочные элементы)</li>
                  <li class="fragment">блочные элементы c overflow: hidden | auto;</li>
              </ul>
-            <a href="http://www.w3.org/TR/CSS21/visuren.html#block-formatting">Block formatting contexts</a>
+            <a href="http://www.w3.org/TR/CSS21/visuren.html#block-formatting">https://clck.ru/AMsj4</a>
         </section>
 
         <section>
@@ -1206,6 +1207,52 @@ td::after {
            </div>
        </section>
         <section>
+            <h2>Подсветка строк и колонок</h2>
+
+<pre class="css size-l fragment" data-fragment-index="1"><code>td { position: relative; }
+td::after {
+    position: absolute;
+    left: 0;
+    top: -5000px;
+
+    width: 100%;
+    height: 10000px;
+
+    z-index: -1;
+
+    content: '';
+}</pre></code>
+            <!--<a class="fragment" data-fragment-index="2" href="https://rawgit.com/VasiliiKuznecov/verstka-tasks-3/1bcb4830010954173552f152b0b2903cdd711347/index.html">z-index: 1;</a><br>-->
+            <!--<a class="fragment" data-fragment-index="2" href="https://rawgit.com/AlexanderVakhitov/verstka-tasks-3/c5c2e28b75f76580fbbc9163b64ffb297a58f728/index.html">z-index: -1;</a>-->
+        </section>
+        <section>
+            <h2>z-index: -1</h2>
+            <img src="img/table-2.png">
+        </section>
+        <section>
+            <h2>z-index: 1</h2>
+
+<pre class="css size-l" data-fragment-index="1"><code>td { position: relative; }
+td::after {
+    position: absolute;
+    left: 0;
+    top: -5000px;
+
+    width: 100%;
+    height: 10000px;
+
+    z-index: 1;
+
+    content: '';
+}</pre></code>
+            <!--<a class="fragment" data-fragment-index="2" href="https://rawgit.com/VasiliiKuznecov/verstka-tasks-3/1bcb4830010954173552f152b0b2903cdd711347/index.html">z-index: 1;</a><br>-->
+            <!--<a class="fragment" data-fragment-index="2" href="https://rawgit.com/AlexanderVakhitov/verstka-tasks-3/c5c2e28b75f76580fbbc9163b64ffb297a58f728/index.html">z-index: -1;</a>-->
+        </section>
+        <section>
+            <h2>z-index: 1</h2>
+            <img src="img/table-1.png">
+        </section>
+        <section>
             <h3>Меняем порядок</h3>
 <pre class="html size-l"><code><div>b1</div>
 <div>b2</div>
@@ -1237,10 +1284,31 @@ td::after {
             <div class="fragment three-column-center" data-fragment-index="3"></div>
             <div class="fragment three-column-size" data-fragment-index="4"></div>
 <div class="ex three-column">
-    <div class="box left">left</div>
-    <div class="box right">right</div>
+    <div class="box left" style="background: rgba(255,0,0,.6);">left</div>
+    <div class="box right" style="background: rgba(255,0,0,.6);">right</div>
     <div class="box center">center</div>
 </div>
+        </section>
+        <section>
+            <h2>clearfix</h2>
+<pre class="html size-l"><code><div class="box">box
+    <div class="float">float</div>
+</div></code></pre>
+<pre class="css size-l"><code data-noescape><span class="fragment" data-fragment-index="1">.float {
+    float: left;
+    height: 100px;
+}</span>
+<span class="fragment" data-fragment-index="2">.box::after {
+    content: '';
+    display: block;
+    clear: both;
+}</span>
+</code></pre>
+            <div class="fragment clearfix-step-1" data-fragment-index="1"></div>
+            <div class="fragment clearfix-step-2" data-fragment-index="2"></div>
+            <div class="ex clear-fix">
+                <div class="box">box <div class="box left" style="background: rgba(255,0,0,.6); height: 100px">left</div></div>
+            </div>
         </section>
         <section>
            <h1>Спасибо</h1>
