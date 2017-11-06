@@ -70,7 +70,8 @@ foo.style.left = parseInt(foo.style.left) + 1 + 'px';
 setTimeout(doMove, 20); // call doMove in 20msec
 }
 function init() {
-foo = document.getElementById('superman'); // get the "foo" object
+// get the "foo" object
+foo = document.getElementById('superman');
 foo.style.left = '0px'; // set its initial position to 0px
 doMove(); // start animating
 }
@@ -516,7 +517,12 @@ window.onload = init;</code></pre>
 <pre class="css size-l"><code>.3d_perspective {
     perspective: 200px;
 }</code></pre>
-            <a href="http://codepen.io/anon/pen/ZbwNwM?editors=110">perspective</a>
+            <!--<a href="http://codepen.io/anon/pen/ZbwNwM?editors=110">perspective</a>-->
+        </section>
+        <section>
+            <video data-autoplay loop>
+                <source src="img/perspective3.webm">
+            </video>
         </section>
 
         <section>
@@ -542,7 +548,10 @@ window.onload = init;</code></pre>
 .3d_perspective_rt {
     perspective-origin: right top;
 }</code></pre>
-            <a href="http://codepen.io/mrsamo/pen/yYGOXx">perspective-origin</a>
+
+        </section>
+        <section>
+            <img src="img/perspective-orig.png">
         </section>
         <section>
             <h2>transform-style</h2>
@@ -552,7 +561,13 @@ window.onload = init;</code></pre>
     /*по умолчанию flat*/
     transform-style: preserve-3d;
 }</code></pre>
-            <a href="https://jsbin.com/pakemoweye">Пример</a><br>
+            <!--<a href="https://jsbin.com/pakemoweye">Пример</a><br>-->
+        </section>
+        <section>
+           <img src="img/style-3d.gif" height="500" style="border: 0;">
+        </section>
+        <section>
+           <img src="img/style-3d-2.gif" height="400" style="border: 0;">
         </section>
         <section>
             <h2>backface-visibility</h2>
@@ -626,7 +641,7 @@ window.onload = init;</code></pre>
             <h2>Матрица преобразований</h2>
 <pre class="css size-l"><code>.matrix {
     /*         matrix(a, c, b, d, tx, ty);*/
-    transform: matrix(2, 0, 0, 1, 0, 0);;
+    transform: matrix(2, 0, 0, 1, 0, 0);
 }</code></pre>
             <img src="img/example-18.png" style="border: 0; vertical-align: top; background: transparent;">
             <img src="img/example-19.png" style="border: 0; vertical-align: top; background: transparent;">
@@ -760,7 +775,7 @@ window.onload = init;</code></pre>
                             </tr>
                             </tbody>
                         </table>
-            <a href="https://dev.opera.com/articles/ru/understanding-the-css-transforms-matrix/">matrix3D</a>
+            <a href="https://dev.opera.com/articles/ru/understanding-the-css-transforms-matrix/">https://clck.ru/AMugB</a>
         </section>
 
         <section data-background-image="img/переход_3.jpg">
@@ -778,7 +793,7 @@ window.onload = init;</code></pre>
                 <li>Свойство transition – описание свойств и характеристик анимации перехода</li>
                 <li>Инициатор – действие, которое вызывает изменение от одного набора свойств к другому(:hover, :target, :focus, :active)</li>
             </ul>
-            <a href="http://www.w3.org/TR/css3-transitions/#animatable-properties">Что можно анимировать</a>
+            <a href="http://www.w3.org/TR/css3-transitions/#animatable-properties">https://clck.ru/AMugp</a>
         </section>
         <section>
 <pre class="css size-l"><code>.button {
@@ -863,8 +878,8 @@ window.onload = init;</code></pre>
 
             <p>P = (1−t)<sup style="font-size: .6em;">2</sup>P<sub style="font-size: .6em;">1</sub> + 2(1−t)tP<sub style="font-size: .6em;">2</sub> + t<sup style="font-size: .6em;">2</sup>P<sub style="font-size: .6em;">3</sub></p>
             <img src="img/cubic-bezier_points_values.png" style="height: 350px; background: #fff"><br>
-            <a href="http://cubic-bezier.com/">Пример</a><br>
-            <a href="http://easings.net/">Шпаргалка</a>
+            <a href="http://cubic-bezier.com/">cubic-bezier.com</a><br>
+            <a href="http://easings.net/">easings.net</a>
         </section>
 
         <section>
@@ -877,7 +892,7 @@ transition-duration: 3s;
             <div class="ex">
                 <span class="rocket fragment toggle"></span>
             </div>
-            <a href="http://codepen.io/stephengreig/pen/vbqBh">Пример 2</a>
+            <a href="http://codepen.io/stephengreig/pen/vbqBh">https://clck.ru/AMuiZ</a>
         </section>
         <section>
             <h2>Краткая запись</h2>
@@ -1152,7 +1167,7 @@ transition-duration: 3s;
     animation-duration: 60s;
     animation-iteration-count: infinite;
 }</code></pre>
-           <a href="https://css-tricks.com/examples/CSS3Clock/">Clock</a>
+            <img src="img/clock.gif" height="300">
            </section>
 
         <section>
@@ -1209,7 +1224,7 @@ animation: scale 2s ease-in, move 2s ease-out;
     ...
     animation: heartBeat 1s ease infinite;
 }
-    .b-heart:hover {
+.b-heart:hover {
     animation-play-state: paused;
 }</code></pre>
                 <div class="b-wr fragment toggle">
@@ -1223,7 +1238,7 @@ animation: scale 2s ease-in, move 2s ease-out;
     width: 0;
     white-space: nowrap;
     overflow: hidden;
-    border-right: .05em solid !important;
+    border-right: 1px solid;
 }
 .typing.visible {
     animation: typing 4s steps(15) forwards,
@@ -1240,7 +1255,7 @@ animation: scale 2s ease-in, move 2s ease-out;
             </div>
 <pre class="html"><code><div class="circle"><img src="cat"></div></code></pre>
 <pre class="css"><code>.circle.run { animation: spin 4s linear infinite; }
-@keyframes spin { to { translate: rotate(1turn); } }</code></pre>
+@keyframes spin { to { transform: rotate(1turn); } }</code></pre>
         </section>
         <section>
             <h2>Движение по кругу</h2>
@@ -1280,10 +1295,21 @@ animation: scale 2s ease-in, move 2s ease-out;
 <pre class="html"><code><div class="box" style="background: #fff !important;"></div></code></pre>
 <pre class="css"><code>.box:hover {
     animation: break-style 1s infinite;
-}</code></pre>
+}
+@keyframes break-style {
+    from { background: red }
+    to { background: red }
+}
+</code></pre>
             <div class="ex">
                 <div class="box break-style fragment toggle" style="background: white !important; color: #000">box</div>
             </div>
+        </section>
+        <section>
+            <h2>Solar System</h2>
+            <video data-autoplay loop>
+                <source src="img/solar.webm">
+            </video>
         </section>
         <section>
             <h2>Заключение</h2>
@@ -1372,7 +1398,7 @@ animation: scale 2s ease-in, move 2s ease-out;
         history: true,
         center: false,
 
-        transition: 'concave', // none/fade/slide/convex/concave/zoom
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
 
         // Optional reveal.js plugins
         dependencies: [
