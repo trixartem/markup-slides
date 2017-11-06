@@ -898,13 +898,13 @@ transition-duration: 3s;
             <h2>Краткая запись</h2>
 <pre class="css size-l"><code>.long {
    transition-property: transform;
-   transition-duration: 1s;
-   transition-delay: .5s;
+   transition-duration: .5s;
+   transition-delay: 1s;
    transition-timing-function: ease-in;
 }</code></pre>
 <pre class="css size-l fragment"><code>.short {
     /*     property  duration [timing-function] [delay]*/
-   transition: transform 1s ease-in .5s;
+   transition: transform .5s ease-in 1s;
 }</code></pre>
 <pre class="css size-l fragment"><code>.multi-short {
     transition: transform .5s ease-in,
